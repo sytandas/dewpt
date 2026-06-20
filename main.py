@@ -10,3 +10,18 @@ alpha = ((a * temperature) / (b + temperature)) + math.log(humidity / 100.0)
 dew_point = (b * alpha) / (a - alpha)
 
 print(f"Dew Point: {dew_point:.2f} °C")
+
+if dew_point < 10:
+    print("Good for racing")
+elif 10 <= dew_point < 13:
+    print("Minimal impact")
+elif 13 <= dew_point < 16:
+    print("Slightly humid, small increase of effort")
+elif 16 <= dew_point < 18:
+    print("Noticeable, pace may slow slightly")
+elif 18 <= dew_point < 21:
+    print("Uncomfortable, noticeable performance loss")
+elif 21 <= dew_point < 24:
+    print("Very humid, significant slowdown")
+else:  # dew_point >= 24
+    print("Oppressive, high heat stress risk")
