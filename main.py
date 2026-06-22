@@ -6,15 +6,16 @@ humidity = float(input("Enter relative humidity (%): "))
 a = 17.27
 b = 237.7
 
+# Magnus-Tetens Formula
 alpha = ((a * temperature) / (b + temperature)) + math.log(humidity / 100.0)
 dew_point = (b * alpha) / (a - alpha)
 
 print(f"Dew Point: {dew_point:.2f} °C")
 
 if dew_point < 10:
-    print("Good for racing")
+    print("Very dry, good for racing")
 elif 10 <= dew_point < 13:
-    print("Minimal impact")
+    print("Comfortable, minimal impact")
 elif 13 <= dew_point < 16:
     print("Slightly humid, small increase of effort")
 elif 16 <= dew_point < 18:
