@@ -1,6 +1,28 @@
-Dew point - how much moisture is actually in the air. 
-Using dew point to determine of the weather effect for running.
-Not 100% relection but fair bit of information to justify use.
+
+Dew point is essentially how much moisture is actually in the air. 
+We can calculate it by using Magnus-Tetens formula.
+The Magnus approximation is used to estimate the dew point:
+$$
+T_d = \frac{b\gamma(T,RH)}{a-\gamma(T,RH)}
+$$
+where
+$$
+\gamma(T,RH) = \frac{aT}{b+T} + \ln\left(\frac{RH}{100}\right)
+$$
+Constants:
+- $a = 17.27$
+- $b = 237.7$
+- $T$ = temperature (°C)
+- $RH$ = relative humidity (%)
+- $T_d$ = dew point (°C)
+
+Not 100% relection but fair bit of information to justify use to calculate running exertion.
+e.g. 
+13/06/2026, 5.30 Panskura, WB, India:
+27 + 100% = 27 degree dew point ~ felt hard for amateur.
+13/06/2026, 15:13 Nakano, Japan:
+28 + 52% = 17.2 degree celsius ~ "too hot to run"- according to elite.
+
 | Dew Point  | Running Conditions | Effect                    |
 | ---------- | ------------------ | ------------------------- |
 | Below 10°C | Very dry           | Excellent for racing      |
@@ -11,13 +33,8 @@ Not 100% relection but fair bit of information to justify use.
 | 21–24°C    | Very humid         | Significant slowdown      |
 | Above 24°C | Oppressive         | High heat stress risk     |
 
-The Magnus-Tetens formula we can calculate dew point
-by using degree celcius and relative humidity.
+TODO: 
+1. Current weither integration with particular day and according exertion, maybe with strava.
 
-e.g. 
-13/06/2026, 5.30 Panskura, WB, India:
-27 + 100% = 27 degree dew point ~ felt hard for amateur.
-13/06/2026, 15:13 Nakano, Japan:
-28 + 52% = 17.2 degree celsius ~ "too hot to run"- according to elite.
-
-try to find out effect on body and how to train using those data.
+## License
+MIT
