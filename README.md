@@ -1,15 +1,17 @@
-
 Dew point is essentially how much moisture is actually in the air. 
 We can calculate it by using Magnus-Tetens formula.
 The Magnus approximation is used to estimate the dew point:
 $$
 T_d = \frac{b\gamma(T,RH)}{a-\gamma(T,RH)}
 $$
+
 where
+
 $$
 \gamma(T,RH) = \frac{aT}{b+T} + \ln\left(\frac{RH}{100}\right)
 $$
-Constants:
+
+**Constants:**
 - $a = 17.27$
 - $b = 237.7$
 - $T$ = temperature (°C)
