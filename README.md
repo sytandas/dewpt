@@ -34,7 +34,6 @@ e.g.
 13/06/2026, 15:13 Nakano, Japan:
 28 + 52% = 17.2 degree celsius ~ "too hot to run"- according to elite.
 
-
 TODO: 
 1. The current weather dewpoint, according exertion, maybe strava activity integration.
 
